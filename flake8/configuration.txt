@@ -1,0 +1,31 @@
+"""
+vim-flake8(https://github.com/nvie/vim-flake8)插件配置。
+改插件主要用于python静态语言检查
+"""
+
+1.安装flake8 python第三方库(https://pypi.python.org/pypi/flake8/)
+    $ pip install flake8
+
+2.安装vundle vim插件(https://github.com/gmarik/vundle)
+    $ mkdir -p ~/.vim/bundle
+    $ git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+
+3. 配置bundles
+    $ vim .vimrc 
+    添加如下配置到.vimrc开头
+    set nocompatible              " be iMproved
+    filetype off                  " required!
+
+    set rtp+=~/.vim/bundle/vundle/
+    call vundle#rc()
+
+    " let Vundle manage Vundle
+    " required! 
+    Bundle 'gmarik/vundle'
+
+    Bundle 'nvie/vim-flake8'  " original repos on GitHub
+
+    filetype plugin indent on     " required!
+4. 存盘并执行 :BundleInstall 它将会github上自动获取.vimrc中 Bundle命令的参数，索对应的github repos
+
+6. 打开任何一个.py文件，按<F7>进行python静态语法检查
