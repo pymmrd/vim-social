@@ -1,3 +1,4 @@
+"Vim Basic configration
 syntax on
 set encoding=utf8
 set paste
